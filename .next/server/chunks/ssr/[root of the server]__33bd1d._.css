@@ -943,10 +943,6 @@ body {
   border-width: 2px;
 }
 
-.border-l {
-  border-left-width: 1px;
-}
-
 .border-r {
   border-right-width: 1px;
 }
@@ -1143,10 +1139,6 @@ body {
 
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-
-.pl-2 {
-  padding-left: .5rem;
 }
 
 .pl-5 {

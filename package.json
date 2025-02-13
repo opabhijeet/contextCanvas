@@ -26,6 +26,7 @@
     "convex": "^1.18.2",
     "convex-helpers": "^0.1.67",
     "date-fns": "^4.1.0",
+    "html2canvas": "^1.4.1",
     "lucide-react": "^0.473.0",
     "nanoid": "^5.0.9",
     "next": "^15.1.5",

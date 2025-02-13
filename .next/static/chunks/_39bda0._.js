@@ -1032,7 +1032,7 @@ function Actions({ children, side, sideOffset, id, title }) {
     const { mutate: remove, isLoading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useApiMutation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useApiMutation"])(__TURBOPACK__imported__module__$5b$project$5d2f$convex$2f$_generated$2f$api$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["api"].board.remove);
     const { mutate: update, isLoading: isLoadingRename } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useApiMutation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useApiMutation"])(__TURBOPACK__imported__module__$5b$project$5d2f$convex$2f$_generated$2f$api$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["api"].board.update);
     const handleCopyLink = ()=>{
-        navigator.clipboard.writeText(`${window.location.origin}/boards/${id}`).then(()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Link copied!")).catch(()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("Failed to copy link"));
+        navigator.clipboard.writeText(`${window.location.origin}/board/${id}`).then(()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Link copied!")).catch(()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("Failed to copy link"));
     };
     const handleDelete = ()=>{
         remove({

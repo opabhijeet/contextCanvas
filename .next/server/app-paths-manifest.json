@@ -1,5 +1,6 @@
 {
+  "/(dashboard)/page": "app/(dashboard)/page.js",
+  "/board/[boardId]/page": "app/board/[boardId]/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(dashboard)/page": "app/(dashboard)/page.js"
+  "/api/liveblocks-auth/route": "app/api/liveblocks-auth/route.js"
 }

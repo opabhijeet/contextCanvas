@@ -6,9 +6,10 @@ import { useDeleteLayers } from "@/hooks/useDeleteLayers";
 import { useSelectionBounds } from "@/hooks/useSelectionBounds";
 import { useMutation, useSelf } from "@liveblocks/react/suspense";
 import { Camera, Color } from "@/types/canvas";
-import { BringToFront, SendToBack, Trash2 } from "lucide-react";
+import { BringToFront, SendToBack, Trash2, Sparkle } from "lucide-react";
 import { memo } from "react";
 import { ColorPicker } from "./colorPicker";
+import html2canvas from "html2canvas";
 
 interface SelectionToolsProps {
   camera: Camera;
@@ -81,6 +82,28 @@ export const SelectionTools = memo(
 
     if (!selectionBounds) return null;
 
+    const handleMagicSearch = () => {
+      const magicSearch = document.getElementById("canvas");
+      if (magicSearch) {
+        html2canvas(magicSearch,{
+          x: selectionBounds.x - camera.x,
+          y: selectionBounds.y - camera.y,
+          width: selectionBounds.width,
+          height: selectionBounds.height,
+        }).then((canvas) => {
+          const img = canvas.toDataURL("image/png");
+          const link = document.createElement("a");
+          link.href = img;
+          link.download = "screenshot.png";
+
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+        });
+      }
+    };
+
+
     const x = selectionBounds.width / 2 + selectionBounds.x - camera.x;
     const y = selectionBounds.y + camera.y;
 
@@ -95,7 +118,7 @@ export const SelectionTools = memo(
         }}
       >
         <ColorPicker onChange={handleColorChange} />
-        <div className="flex flex-col gap-y-0.5">
+        <div className="flex flex-col gap-y-0.5 pr-2 mr-2 border-r border-neutral-200">
           <Hint label="Bring to front">
             <Button variant="board" size="icon" onClick={handleMoveToFront}>
               <BringToFront />
@@ -107,10 +130,15 @@ export const SelectionTools = memo(
             </Button>
           </Hint>
         </div>
-        <div className="flex items-center pl-2 ml-2 border-l">
+        <div className="flex flex-col gap-y-0.5">
           <Hint label="Delete">
             <Button variant="board" size="icon" onClick={deleteLayers}>
               <Trash2 />
+            </Button>
+          </Hint>
+          <Hint label="Magic search" side="bottom">
+            <Button variant="board" size="icon" onClick={handleMagicSearch}>
+              <Sparkle />
             </Button>
           </Hint>
         </div>
