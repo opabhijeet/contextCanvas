@@ -33,8 +33,7 @@ const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$pr
 const config = {
     matcher: [
         '/((?!.*\\..*|_next).*)',
-        '/',
-        '/(api|trpc)(.*)'
+        '/'
     ]
 };
 }}),

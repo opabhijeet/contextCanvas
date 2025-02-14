@@ -92,13 +92,23 @@ export const SelectionTools = memo(
           height: selectionBounds.height,
         }).then((canvas) => {
           const img = canvas.toDataURL("image/png");
-          const link = document.createElement("a");
-          link.href = img;
-          link.download = "screenshot.png";
-
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
+          fetch("http://localhost:3000/api/upload", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                image: img, // Base64 image
+                tags: "canvas-upload", // Add any tags if required
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Response from uploader API:", data); // Log the response
+            })
+            .catch((error) => {
+                console.error("Error uploading image:", error);
+            });
         });
       }
     };
