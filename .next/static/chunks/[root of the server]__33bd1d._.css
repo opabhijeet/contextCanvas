@@ -1040,6 +1040,11 @@ body {
   background-color: #ffffff40;
 }
 
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1));
+}
+
 .fill-blue-500\/5 {
   fill: #3b82f60d;
 }

@@ -40,7 +40,7 @@ import { SelectionTools } from "./selectionTools";
 import { Toolbar } from "./toolbar";
 import { useDeleteLayers } from "@/hooks/useDeleteLayers";
 
-const MAX_LAYERS = 100;
+const MAX_LAYERS = 5000;
 const SELECTION_THRESHOLD = 5;
 
 interface CanvasProps {

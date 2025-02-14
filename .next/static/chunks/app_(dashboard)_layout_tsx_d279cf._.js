@@ -6,8 +6,8 @@
   "path": "static/chunks/app_(dashboard)_layout_tsx_d279cf._.js",
   "chunks": [
     "static/chunks/node_modules_754cfd._.js",
-    "static/chunks/[root of the server]__548f0b._.js",
-    "static/chunks/[next]_internal_font_google_poppins_d1ac7147_module_08047e.css"
+    "static/chunks/[root of the server]__ed4de9._.js",
+    "static/chunks/[next]_internal_font_google_92a957._.css"
   ],
   "source": "dynamic"
 });

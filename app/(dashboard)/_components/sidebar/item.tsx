@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useOrganization, useOrganizationList } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import { Hint } from "@/components/hint";
+import { usePage } from "../../_context/pageContext";
 
 interface ItemProps {
   id: string;
@@ -14,10 +15,13 @@ interface ItemProps {
 export function Item({ id, imageUrl, name }: ItemProps) {
   const { organization } = useOrganization();
   const { setActive } = useOrganizationList();
+  const {updateSelected} = usePage();
+
 
   const isActive = organization?.id === id;
 
   const onClick = () => {
+    updateSelected("other");
     if (!setActive) return;
 
     setActive({

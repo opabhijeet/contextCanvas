@@ -1724,6 +1724,7 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_components$2f$emptyOrg$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/(dashboard)/_components/emptyOrg.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_components$2f$boardList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/(dashboard)/_components/boardList.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_context$2f$pageContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/app/(dashboard)/_context/pageContext.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@clerk/shared/dist/react/index.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_refresh__.signature();
@@ -1731,31 +1732,40 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+;
 function DashboardPage() {
     _s();
     const { organization } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOrganization"])();
+    const { selected } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_context$2f$pageContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePage"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex-1 h-[calc(100%-80px)] p-6",
-        children: !organization ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_components$2f$emptyOrg$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EmptyOrg"], {}, void 0, false, {
+        children: selected === "home" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+            children: "Home"
+        }, void 0, false, {
             fileName: "[project]/app/(dashboard)/page.tsx",
-            lineNumber: 13,
-            columnNumber: 9
+            lineNumber: 14,
+            columnNumber: 30
+        }, this) : !organization ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_components$2f$emptyOrg$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EmptyOrg"], {}, void 0, false, {
+            fileName: "[project]/app/(dashboard)/page.tsx",
+            lineNumber: 16,
+            columnNumber: 11
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_components$2f$boardList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BoardList"], {
             orgId: organization.id
         }, void 0, false, {
             fileName: "[project]/app/(dashboard)/page.tsx",
-            lineNumber: 15,
-            columnNumber: 9
+            lineNumber: 18,
+            columnNumber: 11
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/(dashboard)/page.tsx",
-        lineNumber: 11,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }
-_s(DashboardPage, "Jdvr57tUeN8PCLtiROuY8e2h/FU=", false, function() {
+_s(DashboardPage, "+lbCo6/jFGfplhihCy5AWUacDH8=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOrganization"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$react$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOrganization"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$app$2f28$dashboard$292f$_context$2f$pageContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePage"]
     ];
 });
 _c = DashboardPage;
